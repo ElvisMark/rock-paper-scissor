@@ -4,3 +4,11 @@ function getComputerChoice () {
     return choices[randomPick];
 }
 
+// console.log (getComputerChoice());
+
+// function to play single round
+function playGame (playerSelection, computerSelection) {
+    playerSelection =playerSelection.toLowerCase();
+   
+   //  option to change playerSelection to lowercase
+}
