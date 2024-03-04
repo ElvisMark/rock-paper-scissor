@@ -4,5 +4,3 @@ function getComputerChoice () {
     return choices[randomPick];
 }
 
-// console.log (getComputerChoice());
-
