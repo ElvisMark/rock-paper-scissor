@@ -1,14 +1,7 @@
-function getComputerChoice () {
-    const choices = ['Rock', 'paper', 'Scissors'];
-    const randomPick = Math.floor(Math.random()  * choices.length);
+// Function to get computer's choice randomly
+function getComputerChoice() {
+    const choices = ['rock','paper','scissor'];
+    const randomPick = Math.floor(Math.random() * choices.length);
     return choices[randomPick];
 }
-
-// console.log (getComputerChoice());
-
-// function to play single round
-function playGame (playerSelection, computerSelection) {
-    playerSelection =playerSelection.toLowerCase();
-   
-   //  option to change playerSelection to lowercase
-}
+console.log(getComputerChoice());
