@@ -82,3 +82,20 @@ playGame();
 
 
 
+
+
+
+
+
+
+// // Test the getComputerChoice function
+// console.log(getComputerChoice());
+
+// // Get user's choice
+// const playerSelection = getUserChoice();
+
+// // Get computer's choice
+// const computerSelection = getComputerChoice();
+
+// // Play a round
+// console.log(playRound(playerSelection, computerSelection));
