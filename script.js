@@ -35,11 +35,33 @@ function playRound (playerSelection,computerSelection) {
         return `You Lose ${computerSelection} beats ${playerSelection}`;
     }
 }
+
+// Function to prompt user to select Rock, Paper, or Scissors
+function getUserChoice() {
+    let userInput = prompt("Select Rock, Paper, or Scissors:");
+    // // Validate user input
+    // while (!['rock', 'paper', 'scissors'].includes(userInput.toLowerCase())) {
+    //     userInput = prompt("Invalid choice! Please select Rock, Paper, or Scissors:");
+    // }
+    return userInput;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // test function
-console.log(getComputerChoice())
+// console.log(getComputerChoice())
 
 // get player selection
-const playerSelection = 'rock';
+const playerSelection = getUserChoice();
 
 // get computer selection 
 const computerSelection = getComputerChoice();
