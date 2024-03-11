@@ -22,4 +22,28 @@ function playRound (playerSelection,computerSelection) {
         scissor : 'paper',
         paper : 'rock'
     };
+
+    // Decide the winner or tie
+
+    if (playerSelection === computerSelection.toLowerCase()) {
+        return "It's a tie!";
+    }
+    else if (winningCondition[playerSelection] === computerSelection.toLowerCase()){
+        return `You Win! ${playerSelection} beats ${computerSelection}`;
+    }
+    else {
+        return `You Lose ${computerSelection} beats ${playerSelection}`;
+    }
 }
+// test function
+console.log(getComputerChoice())
+
+// get player selection
+const playerSelection = 'rock';
+
+// get computer selection 
+const computerSelection = getComputerChoice();
+
+//play a round
+
+console.log (playRound(playerSelection,computerSelection));
