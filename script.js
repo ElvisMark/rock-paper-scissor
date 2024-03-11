@@ -39,33 +39,46 @@ function playRound (playerSelection,computerSelection) {
 // Function to prompt user to select Rock, Paper, or Scissors
 function getUserChoice() {
     let userInput = prompt("Select Rock, Paper, or Scissors:");
-    // // Validate user input
-    // while (!['rock', 'paper', 'scissors'].includes(userInput.toLowerCase())) {
-    //     userInput = prompt("Invalid choice! Please select Rock, Paper, or Scissors:");
-    // }
+    // Validate user input
+    while (!['rock', 'paper', 'scissors'].includes(userInput.toLowerCase())) {
+        userInput = prompt("Invalid choice! Please select Rock, Paper, or Scissors:");
+    }
     return userInput;
 }
 
+// Function to play a five round game
+function playGame() {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    // Play five rounds
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = getUserChoice();
+        const computerSelection = getComputerChoice();
+        const result = playRound(playerSelection, computerSelection);
+        console.log(result);
+
+        // Update scores
+        if (result.startsWith("You Win!")) {
+            playerScore++;
+        } else if (result.startsWith("You Lose!")) {
+            computerScore++;
+        }
+    }
+
+    // Display final scores and determine the winner
+    console.log(`Final Scores - Player: ${playerScore}, Computer: ${computerScore}`);
+    if (playerScore > computerScore) {
+        console.log("You win the game!");
+    } else if (playerScore < computerScore) {
+        console.log("You lose the game!");
+    } else {
+        console.log("It's a tie!");
+    }
+}
+
+// Start the game
+playGame();
 
 
 
-
-
-
-
-
-
-
-
-// test function
-// console.log(getComputerChoice())
-
-// get player selection
-const playerSelection = getUserChoice();
-
-// get computer selection 
-const computerSelection = getComputerChoice();
-
-//play a round
-
-console.log (playRound(playerSelection,computerSelection));
